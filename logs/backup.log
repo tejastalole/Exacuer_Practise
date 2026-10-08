@@ -1,0 +1,24 @@
+set -o pipefail; /usr/bin/mariadb-dump --user=_faafa10019680262 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _faafa10019680262 | /usr/bin/gzip >> ./site1.local/private/backups/20261006_180002-site1_local-database.sql.gz
+
+Backup Summary for site1.local at 2026-10-06 18:00:03.784454
+Config  : ./site1.local/private/backups/20261006_180002-site1_local-site_config_backup.json 94.0B
+Database: ./site1.local/private/backups/20261006_180002-site1_local-database.sql.gz         971.4KiB
+Backup for Site site1.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_faafa10019680262 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _faafa10019680262 | /usr/bin/gzip >> ./site1.local/private/backups/20261007_120003-site1_local-database.sql.gz
+
+Backup Summary for site1.local at 2026-10-07 12:00:09.721941
+Config  : ./site1.local/private/backups/20261007_120003-site1_local-site_config_backup.json 94.0B
+Database: ./site1.local/private/backups/20261007_120003-site1_local-database.sql.gz         972.5KiB
+Backup for Site site1.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_faafa10019680262 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _faafa10019680262 | /usr/bin/gzip >> ./site1.local/private/backups/20261007_180002-site1_local-database.sql.gz
+
+Backup Summary for site1.local at 2026-10-07 18:00:08.929713
+Config  : ./site1.local/private/backups/20261007_180002-site1_local-site_config_backup.json 94.0B
+Database: ./site1.local/private/backups/20261007_180002-site1_local-database.sql.gz         972.5KiB
+Backup for Site site1.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_faafa10019680262 --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _faafa10019680262 | /usr/bin/gzip >> ./site1.local/private/backups/20261008_120002-site1_local-database.sql.gz
+
+Backup Summary for site1.local at 2026-10-08 12:00:04.993171
+Config  : ./site1.local/private/backups/20261008_120002-site1_local-site_config_backup.json 94.0B
+Database: ./site1.local/private/backups/20261008_120002-site1_local-database.sql.gz         978.6KiB
+Backup for Site site1.local has been successfully completed

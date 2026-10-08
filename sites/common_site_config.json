@@ -1,0 +1,20 @@
+{
+ "background_workers": 1,
+ "default_site": "site1.local",
+ "developer_mode": 1,
+ "file_watcher_port": 6791,
+ "frappe_user": "tejas-talole",
+ "gunicorn_workers": 17,
+ "live_reload": true,
+ "rebase_on_pull": false,
+ "redis_cache": "redis://127.0.0.1:13004",
+ "redis_queue": "redis://127.0.0.1:11004",
+ "redis_socketio": "redis://127.0.0.1:13004",
+ "restart_supervisor_on_update": false,
+ "restart_systemd_on_update": false,
+ "serve_default_site": true,
+ "shallow_clone": true,
+ "socketio_port": 9004,
+ "use_redis_auth": false,
+ "webserver_port": 8004
+}

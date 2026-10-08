@@ -1,0 +1,201 @@
+2026-10-06 12:35:39,253 DEBUG cd exacuer_assessment && uv venv env --seed --python python3
+2026-10-06 12:35:55,491 LOG Getting frappe
+2026-10-06 12:35:55,491 DEBUG cd exacuer_assessment/apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2026-10-06 12:36:19,416 LOG Installing frappe
+2026-10-06 12:36:19,417 DEBUG cd /home/tejas-talole/exacuer_assessment && uv pip install --quiet -e /home/tejas-talole/exacuer_assessment/apps/frappe  --python /home/tejas-talole/exacuer_assessment/env/bin/python
+2026-10-06 12:36:20,609 DEBUG cd /home/tejas-talole/exacuer_assessment/apps/frappe && yarn install --check-files
+2026-10-06 12:36:25,235 DEBUG cd exacuer_assessment && bench build
+2026-10-06 12:36:25,337 INFO /home/tejas-talole/.local/bin/bench build
+2026-10-06 12:36:56,647 LOG setting up backups
+2026-10-06 12:36:56,655 LOG backups were set up
+2026-10-06 12:36:56,655 INFO Bench exacuer_assessment initialized
+2026-10-06 12:37:08,686 INFO /home/tejas-talole/.local/bin/bench new-site site1.local
+2026-10-06 12:38:48,483 INFO /home/tejas-talole/.local/bin/bench get-app erpnext --branch version-15
+2026-10-06 12:39:03,645 LOG Getting erpnext
+2026-10-06 12:39:03,645 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-15 --depth 1 --origin upstream
+2026-10-06 12:39:26,851 LOG Installing erpnext
+2026-10-06 12:39:26,851 DEBUG cd /home/tejas-talole/exacuer_assessment && uv pip install --quiet -e /home/tejas-talole/exacuer_assessment/apps/erpnext  --python /home/tejas-talole/exacuer_assessment/env/bin/python
+2026-10-06 12:39:27,383 DEBUG cd /home/tejas-talole/exacuer_assessment/apps/erpnext && yarn install --check-files
+2026-10-06 12:39:27,624 DEBUG bench build --app erpnext
+2026-10-06 12:39:27,730 INFO /home/tejas-talole/.local/bin/bench build --app erpnext
+2026-10-06 12:39:30,273 INFO /home/tejas-talole/.local/bin/bench get-app payments
+2026-10-06 12:39:45,877 LOG Getting payments
+2026-10-06 12:39:45,877 DEBUG cd ./apps && git clone https://github.com/frappe/payments.git  --depth 1 --origin upstream
+2026-10-06 12:40:02,143 LOG Installing payments
+2026-10-06 12:40:02,143 DEBUG cd /home/tejas-talole/exacuer_assessment && uv pip install --quiet -e /home/tejas-talole/exacuer_assessment/apps/payments  --python /home/tejas-talole/exacuer_assessment/env/bin/python
+2026-10-06 12:40:04,425 DEBUG bench build --app payments
+2026-10-06 12:40:04,524 INFO /home/tejas-talole/.local/bin/bench build --app payments
+2026-10-06 12:40:06,496 INFO /home/tejas-talole/.local/bin/bench get-app hrms
+2026-10-06 12:40:22,114 LOG Getting hrms
+2026-10-06 12:40:22,114 DEBUG cd ./apps && git clone https://github.com/frappe/hrms.git  --depth 1 --origin upstream
+2026-10-06 12:40:42,030 LOG Installing hrms
+2026-10-06 12:40:42,030 DEBUG cd /home/tejas-talole/exacuer_assessment && uv pip install --quiet -e /home/tejas-talole/exacuer_assessment/apps/hrms  --python /home/tejas-talole/exacuer_assessment/env/bin/python
+2026-10-06 12:40:42,314 DEBUG cd /home/tejas-talole/exacuer_assessment/apps/hrms && yarn install --check-files
+2026-10-06 12:40:53,554 DEBUG bench build --app hrms
+2026-10-06 12:40:53,656 INFO /home/tejas-talole/.local/bin/bench build --app hrms
+2026-10-06 12:41:19,861 INFO /home/tejas-talole/.local/bin/bench --site site1.local install-app erpnext
+2026-10-06 12:42:10,725 INFO /home/tejas-talole/.local/bin/bench --site site1.local install-app payments
+2026-10-06 12:42:14,891 INFO /home/tejas-talole/.local/bin/bench --site site1.local install-app hrms
+2026-10-06 12:42:31,586 INFO /home/tejas-talole/.local/bin/bench use site1.local
+2026-10-06 12:42:32,214 INFO /home/tejas-talole/.local/bin/bench start
+2026-10-06 12:42:32,503 INFO /home/tejas-talole/.local/bin/bench watch
+2026-10-06 12:42:32,548 INFO /home/tejas-talole/.local/bin/bench schedule
+2026-10-06 12:42:32,553 INFO /home/tejas-talole/.local/bin/bench serve --port 8004
+2026-10-06 12:42:32,557 INFO /home/tejas-talole/.local/bin/bench socketio
+2026-10-06 12:42:32,565 INFO /home/tejas-talole/.local/bin/bench worker
+2026-10-06 12:43:19,518 INFO /home/tejas-talole/.local/bin/bench use site1.local
+2026-10-06 12:43:24,739 INFO /home/tejas-talole/.local/bin/bench start
+2026-10-06 12:43:25,104 INFO /home/tejas-talole/.local/bin/bench watch
+2026-10-06 12:43:25,115 INFO /home/tejas-talole/.local/bin/bench socketio
+2026-10-06 12:43:25,139 INFO /home/tejas-talole/.local/bin/bench serve --port 8004
+2026-10-06 12:43:25,159 INFO /home/tejas-talole/.local/bin/bench worker
+2026-10-06 12:43:25,173 INFO /home/tejas-talole/.local/bin/bench schedule
+2026-10-06 15:14:59,112 INFO /home/tejas-talole/.local/bin/bench start
+2026-10-06 15:14:59,399 INFO /home/tejas-talole/.local/bin/bench serve --port 8004
+2026-10-06 15:14:59,414 INFO /home/tejas-talole/.local/bin/bench worker
+2026-10-06 15:14:59,442 INFO /home/tejas-talole/.local/bin/bench schedule
+2026-10-06 15:14:59,446 INFO /home/tejas-talole/.local/bin/bench socketio
+2026-10-06 15:14:59,446 INFO /home/tejas-talole/.local/bin/bench watch
+2026-10-06 15:16:03,538 INFO /home/tejas-talole/.local/bin/bench start
+2026-10-06 15:16:03,837 INFO /home/tejas-talole/.local/bin/bench worker
+2026-10-06 15:16:03,838 INFO /home/tejas-talole/.local/bin/bench socketio
+2026-10-06 15:16:03,847 INFO /home/tejas-talole/.local/bin/bench watch
+2026-10-06 15:16:03,862 INFO /home/tejas-talole/.local/bin/bench serve --port 8004
+2026-10-06 15:16:03,878 INFO /home/tejas-talole/.local/bin/bench schedule
+2026-10-06 15:47:00,583 INFO /home/tejas-talole/.local/bin/bench new-app new_app
+2026-10-06 15:47:00,585 LOG creating new app new_app
+2026-10-06 15:48:04,878 LOG Installing new_app
+2026-10-06 15:48:04,879 DEBUG cd /home/tejas-talole/exacuer_assessment && uv pip install --quiet -e /home/tejas-talole/exacuer_assessment/apps/new_app  --python /home/tejas-talole/exacuer_assessment/env/bin/python
+2026-10-06 15:48:05,295 DEBUG bench build --app new_app
+2026-10-06 15:48:05,411 INFO /home/tejas-talole/.local/bin/bench build --app new_app
+2026-10-06 15:48:24,836 INFO /home/tejas-talole/.local/bin/bench --site evrag install-app new_app
+2026-10-06 15:48:50,202 INFO /home/tejas-talole/.local/bin/bench --site site1.local install-app new_app
+2026-10-06 15:49:38,208 INFO /home/tejas-talole/.local/bin/bench use site1.local
+2026-10-06 15:49:43,173 INFO /home/tejas-talole/.local/bin/bench start
+2026-10-06 15:49:43,460 INFO /home/tejas-talole/.local/bin/bench socketio
+2026-10-06 15:49:43,466 INFO /home/tejas-talole/.local/bin/bench schedule
+2026-10-06 15:49:43,486 INFO /home/tejas-talole/.local/bin/bench worker
+2026-10-06 15:49:43,488 INFO /home/tejas-talole/.local/bin/bench serve --port 8004
+2026-10-06 15:49:43,505 INFO /home/tejas-talole/.local/bin/bench watch
+2026-10-06 15:52:28,211 INFO /home/tejas-talole/.local/bin/bench set-config -g developer_mode 1
+2026-10-06 17:26:16,804 INFO /home/tejas-talole/.local/bin/bench --site site1.local execute 
+import frappe
+print('Companies:', frappe.get_all('Company', fields=['name','default_currency']))
+print('Customers:', frappe.get_all('Customer', fields=['name','customer_name'], limit=10))
+print('Items:', frappe.get_all('Item', fields=['name','item_name','stock_uom'], filters={'is_sales_item':1,'disabled':0}, limit=10))
+print('Warehouses:', frappe.get_all('Warehouse', fields=['name'], limit=5))
+print('SO count:', frappe.db.count('Sales Order'))
+print('Price Lists:', frappe.get_all('Price List', fields=['name','selling']))
+print('Taxes:', frappe.get_all('Sales Taxes and Charges Template', fields=['name'], limit=5))
+
+2026-10-06 17:26:24,668 INFO /home/tejas-talole/.local/bin/bench --site site1.local execute 
+import frappe
+print('Companies:', frappe.get_all('Company', fields=['name','default_currency']))
+print('Customers:', frappe.get_all('Customer', fields=['name','customer_name'], limit=10))
+print('Items:', frappe.get_all('Item', fields=['name','item_name','stock_uom'], filters={'is_sales_item':1,'disabled':0}, limit=10))
+print('Warehouses:', frappe.get_all('Warehouse', fields=['name'], limit=5))
+print('SO count:', frappe.db.count('Sales Order'))
+print('Price Lists:', frappe.get_all('Price List', fields=['name','selling']))
+
+2026-10-06 17:26:34,657 INFO /home/tejas-talole/.local/bin/bench --site site1.local execute 
+import frappe
+print('Companies:', frappe.get_all('Company', fields=['name','default_currency']))
+print('Customers:', frappe.get_all('Customer', fields=['name','customer_name'], limit=10))
+print('Items:', frappe.get_all('Item', fields=['name','item_name','stock_uom'], filters={'is_sales_item':1,'disabled':0}, limit=10))
+print('Warehouses:', frappe.get_all('Warehouse', fields=['name'], limit=5))
+print('SO count:', frappe.db.count('Sales Order'))
+print('Price Lists:', frappe.get_all('Price List', fields=['name','selling']))
+
+2026-10-06 17:26:50,893 INFO /home/tejas-talole/.local/bin/bench --site site1.local execute new_app.create_so_dummy_data.create
+2026-10-06 17:26:58,617 INFO /home/tejas-talole/.local/bin/bench --site site1.local migrate
+2026-10-06 17:27:03,935 INFO /home/tejas-talole/.local/bin/bench --site site1.local execute 
+import frappe
+print('Customers:', frappe.get_all('Customer', filters={'name': ['like', 'Practice%']}, pluck='name'))
+print('Items:', frappe.get_all('Item', filters={'name': ['like', 'PRACTICE%']}, pluck='name'))
+print('Contact cols:', [c[0] for c in frappe.db.sql("SHOW COLUMNS FROM `tabContact` LIKE '%billing%'")])
+
+2026-10-06 17:27:21,986 INFO /home/tejas-talole/.local/bin/bench --site site1.local migrate
+2026-10-06 17:27:32,287 INFO /home/tejas-talole/.local/bin/bench --site site1.local mariadb -e SHOW COLUMNS FROM `tabContact` LIKE '%contact%';
+2026-10-06 17:27:32,957 INFO /home/tejas-talole/.local/bin/bench --site site1.local list-apps
+2026-10-06 17:27:33,821 INFO /home/tejas-talole/.local/bin/bench --site site1.local execute new_app.create_so_dummy_data._get_company
+2026-10-06 17:27:40,909 INFO /home/tejas-talole/.local/bin/bench --site site1.local mariadb -e SELECT name,dt,fieldname FROM `tabCustom Field` WHERE dt='Contact'; SELECT name FROM `tabCustomer` WHERE name LIKE 'Practice%'; SELECT name FROM `tabItem` WHERE name LIKE 'PRACTICE%';
+2026-10-06 17:27:53,529 INFO /home/tejas-talole/.local/bin/bench --site site1.local mariadb -e SELECT name FROM `tabCustomer Group` LIMIT 10; SELECT name FROM `tabItem Group` LIMIT 10; SELECT name FROM `tabTerritory` LIMIT 5;
+2026-10-06 17:27:54,100 INFO /home/tejas-talole/.local/bin/bench --site site1.local execute new_app.create_so_dummy_data.create
+2026-10-06 17:28:00,145 INFO /home/tejas-talole/.local/bin/bench --site site1.local mariadb -e 
+SELECT name, customer, transaction_date, delivery_date, grand_total, status, docstatus
+FROM `tabSales Order`
+WHERE name IN ('SAL-ORD-2026-00001','SAL-ORD-2026-00002','SAL-ORD-2026-00003');
+SELECT parent, item_code, qty, rate, amount
+FROM `tabSales Order Item`
+WHERE parent IN ('SAL-ORD-2026-00001','SAL-ORD-2026-00002','SAL-ORD-2026-00003')
+ORDER BY parent, idx;
+
+2026-10-06 17:37:19,913 INFO /home/tejas-talole/.local/bin/bench --site site1.local execute new_app.create_so_dummy_data.delete
+2026-10-06 17:37:31,028 INFO /home/tejas-talole/.local/bin/bench --site site1.local execute new_app.create_so_dummy_data.delete
+2026-10-06 17:37:39,726 INFO /home/tejas-talole/.local/bin/bench --site site1.local mariadb -e 
+SELECT name, docstatus, status FROM `tabSales Order` WHERE customer LIKE 'Practice%' OR name LIKE 'SAL-ORD-2026-%';
+SELECT name, docstatus FROM `tabSales Invoice` WHERE customer LIKE 'Practice%';
+SELECT name, docstatus FROM `tabDelivery Note` WHERE customer LIKE 'Practice%';
+
+2026-10-06 17:37:40,280 INFO /home/tejas-talole/.local/bin/bench --site site1.local execute new_app.create_so_dummy_data.delete
+2026-10-06 17:37:42,617 INFO /home/tejas-talole/.local/bin/bench --site site1.local mariadb -e 
+SELECT COUNT(*) AS so_left FROM `tabSales Order` WHERE customer LIKE 'Practice%';
+SELECT COUNT(*) AS items_left FROM `tabItem` WHERE name LIKE 'PRACTICE%';
+SELECT COUNT(*) AS customers_left FROM `tabCustomer` WHERE name LIKE 'Practice%';
+
+2026-10-06 18:00:01,633 INFO /home/tejas-talole/.local/bin/bench --verbose --site all backup
+2026-10-07 12:00:02,333 INFO /home/tejas-talole/.local/bin/bench --verbose --site all backup
+2026-10-07 18:00:01,482 INFO /home/tejas-talole/.local/bin/bench --verbose --site all backup
+2026-10-08 11:33:26,099 INFO /home/tejas-talole/.local/bin/bench use site1.local
+2026-10-08 11:33:40,100 INFO /home/tejas-talole/.local/bin/bench start
+2026-10-08 11:33:40,412 INFO /home/tejas-talole/.local/bin/bench worker
+2026-10-08 11:33:40,432 INFO /home/tejas-talole/.local/bin/bench socketio
+2026-10-08 11:33:40,445 INFO /home/tejas-talole/.local/bin/bench watch
+2026-10-08 11:33:40,448 INFO /home/tejas-talole/.local/bin/bench schedule
+2026-10-08 11:33:40,451 INFO /home/tejas-talole/.local/bin/bench serve --port 8004
+2026-10-08 12:00:01,829 INFO /home/tejas-talole/.local/bin/bench --verbose --site all backup
+2026-10-08 13:58:09,409 INFO /home/tejas-talole/.local/bin/bench --site site1.local mariadb -e 
+SELECT name FROM `tabCompany` LIMIT 5;
+SELECT COUNT(*) AS emp_count FROM `tabEmployee`;
+SELECT name, employee_name FROM `tabEmployee` LIMIT 5;
+SELECT name FROM `tabDepartment` LIMIT 5;
+SELECT name FROM `tabDesignation` LIMIT 5;
+
+2026-10-08 13:59:08,050 INFO /home/tejas-talole/.local/bin/bench --site site1.local mariadb -e SELECT name FROM `tabGender`; SELECT fieldname,reqd FROM `tabDocField` WHERE parent='Employee' AND reqd=1;
+2026-10-08 14:03:33,844 INFO /home/tejas-talole/.local/bin/bench --site site1.local execute new_app.create_employee_demo.create
+2026-10-08 14:03:37,897 INFO /home/tejas-talole/.local/bin/bench --site site1.local mariadb -e SELECT name, employee_name, designation, cell_number, status FROM `tabEmployee` ORDER BY name;
+2026-10-08 14:12:43,823 INFO /home/tejas-talole/.local/bin/bench doctor
+2026-10-08 14:12:53,548 INFO /home/tejas-talole/.local/bin/bench doctor
+2026-10-08 14:33:41,947 INFO /home/tejas-talole/.local/bin/bench doctor
+2026-10-08 14:37:50,218 INFO /home/tejas-talole/.local/bin/bench start
+2026-10-08 14:37:50,530 INFO /home/tejas-talole/.local/bin/bench socketio
+2026-10-08 14:37:50,539 INFO /home/tejas-talole/.local/bin/bench watch
+2026-10-08 14:37:50,542 INFO /home/tejas-talole/.local/bin/bench schedule
+2026-10-08 14:37:50,572 INFO /home/tejas-talole/.local/bin/bench serve --port 8004
+2026-10-08 14:37:50,573 INFO /home/tejas-talole/.local/bin/bench worker
+2026-10-08 14:38:08,564 INFO /home/tejas-talole/.local/bin/bench worker --queue long
+2026-10-08 14:40:55,568 INFO /home/tejas-talole/.local/bin/bench --site site1.local mariadb -e 
+SELECT COUNT(*) AS emp_count FROM `tabEmployee`;
+SELECT name FROM `tabEmployee` ORDER BY creation DESC LIMIT 3;
+SELECT name, current FROM `tabSeries` WHERE name LIKE 'HR-EMP%';
+SELECT name FROM `tabCompany` LIMIT 1;
+DESCRIBE `tabEmployee`;
+
+2026-10-08 14:41:05,163 INFO /home/tejas-talole/.local/bin/bench --site site1.local mariadb -e SHOW COLUMNS FROM `tabEmployee` WHERE Field IN ('lft','rgt','old_parent','designation'); SELECT designation FROM `tabEmployee` LIMIT 1; SELECT name FROM `tabDesignation` LIMIT 10;
+2026-10-08 14:41:31,016 INFO /home/tejas-talole/.local/bin/bench --site site1.local mariadb -e SELECT name, lft, rgt FROM `tabEmployee` ORDER BY lft;
+2026-10-08 14:42:01,661 INFO /home/tejas-talole/.local/bin/bench --site site1.local execute new_app.create_employee_bulk.create
+2026-10-08 14:43:09,406 INFO /home/tejas-talole/.local/bin/bench --site site1.local execute new_app.create_employee_bulk.create
+2026-10-08 14:43:12,611 INFO /home/tejas-talole/.local/bin/bench --site site1.local mariadb -e SELECT COUNT(*) AS total FROM `tabEmployee`; SELECT name, employee_name FROM `tabEmployee` WHERE first_name LIKE 'Demo%' ORDER BY name LIMIT 2; SELECT name, employee_name FROM `tabEmployee` WHERE first_name LIKE 'Demo%' ORDER BY name DESC LIMIT 2; SELECT name, current FROM `tabSeries` WHERE name='HR-EMP-';
+2026-10-08 14:48:45,464 INFO /home/tejas-talole/.local/bin/bench --site site1.local mariadb -e 
+SELECT COUNT(*) AS total FROM `tabEmployee`;
+SELECT COUNT(*) AS linked_user FROM `tabEmployee` WHERE user_id IS NOT NULL AND user_id != '';
+
+2026-10-08 14:51:02,722 INFO /home/tejas-talole/.local/bin/bench --site site1.local execute new_app.create_employee_bulk.create
+2026-10-08 14:51:05,902 INFO /home/tejas-talole/.local/bin/bench --site site1.local mariadb -e 
+SELECT COUNT(*) AS total FROM `tabEmployee`;
+SELECT name, employee_name, gender, designation, department, cell_number, personal_email, date_of_birth, date_of_joining
+FROM `tabEmployee` ORDER BY name LIMIT 8;
+SELECT name, employee_name, gender, designation FROM `tabEmployee` ORDER BY name DESC LIMIT 5;
+SELECT name, current FROM `tabSeries` WHERE name='HR-EMP-';
+
+2026-10-08 14:58:56,384 INFO /home/tejas-talole/.local/bin/bench worker --queue long
