@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "creation": "2026-10-12 18:40:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "web_app_url",
+  "sync_token",
+  "auto_sync",
+  "sync_interval",
+  "column_break_main",
+  "last_sync_on",
+  "last_sync_result",
+  "section_break_daily",
+  "daily_sync",
+  "daily_sync_from",
+  "daily_sync_time",
+  "column_break_daily",
+  "last_daily_sync_on"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "description": "Connects ERPNext to the Google Sheet. The sheet's Status column (Pending / Draft / Submitted / Cancelled, empty means Draft) decides what happens to each row's AM Stock Entry.",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "depends_on": "enabled",
+   "description": "Apps Script Web App URL (Deploy \u2192 New deployment \u2192 Web app), ending in /exec.",
+   "fieldname": "web_app_url",
+   "fieldtype": "Data",
+   "label": "Web App URL",
+   "mandatory_depends_on": "enabled",
+   "options": "URL"
+  },
+  {
+   "depends_on": "enabled",
+   "description": "Same value as the SYNC_TOKEN Script Property in the Apps Script project.",
+   "fieldname": "sync_token",
+   "fieldtype": "Password",
+   "label": "Sync Token",
+   "mandatory_depends_on": "enabled"
+  },
+  {
+   "default": "1",
+   "depends_on": "enabled",
+   "description": "Sync in the background every Sync Interval, so clicking Sync Now is not needed. Requires bench (scheduler and worker) to be running. Can't be used together with Daily Sync.",
+   "fieldname": "auto_sync",
+   "fieldtype": "Check",
+   "label": "Auto Sync"
+  },
+  {
+   "default": "60",
+   "depends_on": "eval:doc.enabled && doc.auto_sync",
+   "description": "How often the sheet is synced automatically.",
+   "fieldname": "sync_interval",
+   "fieldtype": "Select",
+   "label": "Sync Interval (sec)",
+   "mandatory_depends_on": "eval:doc.enabled && doc.auto_sync",
+   "options": "30\n60\n90\n120"
+  },
+  {
+   "fieldname": "column_break_main",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_sync_on",
+   "fieldtype": "Datetime",
+   "label": "Last Sync On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "last_sync_result",
+   "fieldtype": "Small Text",
+   "label": "Last Sync Result",
+   "read_only": 1
+  },
+  {
+   "depends_on": "enabled",
+   "fieldname": "section_break_daily",
+   "fieldtype": "Section Break",
+   "label": "Daily Sync"
+  },
+  {
+   "default": "0",
+   "description": "Sync once a day at Sync Time (e.g. 00:00 for 12 midnight), instead of Auto Sync. If ERPNext is not running at that time, the sync runs as soon as it starts again.",
+   "fieldname": "daily_sync",
+   "fieldtype": "Check",
+   "label": "Daily Sync"
+  },
+  {
+   "default": "Today",
+   "depends_on": "daily_sync",
+   "description": "First day of the daily sync.",
+   "fieldname": "daily_sync_from",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "mandatory_depends_on": "daily_sync"
+  },
+  {
+   "default": "00:00:00",
+   "depends_on": "daily_sync",
+   "fieldname": "daily_sync_time",
+   "fieldtype": "Time",
+   "label": "Sync Time",
+   "mandatory_depends_on": "daily_sync"
+  },
+  {
+   "fieldname": "column_break_daily",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "daily_sync",
+   "fieldname": "last_daily_sync_on",
+   "fieldtype": "Datetime",
+   "label": "Last Daily Sync On",
+   "read_only": 1
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-10-13 14:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Asset Management",
+ "name": "AM Google Sheet Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Stock Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
